@@ -13,7 +13,7 @@ module.exports = {
     NO_QUOTES_BY_AUTHOR: 'There are no quotes stored by that author!',
     RANDOM_QUOTE_GENERIC_ERROR: 'There was a problem getting a quote. Please try again later!',
     EMPTY_QUERY: 'There were no quotes found matching your search.',
-    QUERY_TOO_GENERAL: 'Your search returned more than ' + require('./constants.js').MAX_SEARCH_RESULTS + ' results. Try narrowing your search.',
+    QUERY_TOO_GENERAL: 'Your search returned too many results. Try narrowing your search.',
     SEARCH_RESULT_TOO_LONG: 'Your search returned results, but returning them all would exceed Discord\'s 2000 character limit for messages.' +
     ' You can either narrow your search, or you can always download saved quotes using the `/download` command.',
     GENERIC_INTERACTION_ERROR: 'There was an error while executing this command!',
