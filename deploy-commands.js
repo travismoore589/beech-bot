@@ -13,8 +13,8 @@ for (const file of commandFiles) {
     commands.push(command.data.toJSON());
 }
 
-const rest = new REST({ version: '9' }).setToken("MTA0MjY5MzAxNTczMjQ5ODQ3Mg.G-WnuZ.k8B5LXS1R6M2l8DgjQVhYurEURaQP6cSE1qPL8");
+const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
-rest.put(Routes.applicationCommands("1042693015732498472"), { body: commands })
+rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands })
     .then(() => console.log('Successfully registered application commands.'))
     .catch(console.error);

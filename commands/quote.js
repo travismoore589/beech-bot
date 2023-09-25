@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('random')
+        .setName('quote')
         .setDescription('get a random quote, optionally filtering by author.')
         .addStringOption(option =>
             option.setName('author')

@@ -6,8 +6,6 @@ const BOT = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
 });
 
-console.log(new Date().getDate())
-
 BOT.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
@@ -26,7 +24,7 @@ BOT.user.setStatus('available');
     console.log('Ready!');
 });
 
-BOT.login("MTA0MjY5MzAxNTczMjQ5ODQ3Mg.G-WnuZ.k8B5LXS1R6M2l8DgjQVhYurEURaQP6cSE1qPL8").then(() => {
+BOT.login(process.env.TOKEN).then(() => {
     console.log('bot successfully logged in');
 });
 
