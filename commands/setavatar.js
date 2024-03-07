@@ -9,7 +9,7 @@ module.exports = {
             option.setName('avatar')
                 .setDescription('An image to use as the avatar for the bot')
                 .setRequired(true)),
-    async execute (interaction, client) {
+    async execute (interaction) {
         await interactionHandlers.avatarHandler(interaction);
     }
 };
