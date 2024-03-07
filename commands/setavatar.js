@@ -1,7 +1,7 @@
+const interactionHandlers = require('../modules/interaction-handlers.js');
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    owner: true,
     data: new SlashCommandBuilder()
     .setName('setavatar')
     .setDescription('Set the avatar of the bot')
